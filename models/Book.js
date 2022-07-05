@@ -8,13 +8,20 @@ const BookSchema = new mongoose.Schema (
             required: true, 
             unique: true
         }, 
+        totalPages: {
+            type: Number, 
+            require: true
+        },
+        isb: {
+            type: Number,
+            required: true 
+        },
         authorFirstName: {
             type: String, 
             required: true
         }, 
         authorMiddleName: {
             type: String, 
-            required: true
         }, 
         authorLastName: {
             type: String, 
@@ -28,11 +35,6 @@ const BookSchema = new mongoose.Schema (
             type: String, 
             required: true
         }, 
-        totalPages: {
-            type: Number, 
-            require: true
-        }, 
-
     }, 
     {timestamps: true}
 ); 
